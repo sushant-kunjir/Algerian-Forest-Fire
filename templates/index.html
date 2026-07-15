@@ -378,37 +378,45 @@
         <p class="section-label" style="margin:0 -22px 18px; border-top:1px solid var(--line);">Fuel &amp; Fire Behavior Codes</p>
         <div class="field-grid thirds">
           <div class="field">
-            <label>FFMC</label>
+            <label>FFMC <span class="unit">fuel dryness</span></label>
             <div class="input-shell">
               <input type="text" name="FFMC" placeholder="e.g. 88.2" required="required"/>
             </div>
           </div>
           <div class="field">
-            <label>DMC</label>
+            <label>DMC <span class="unit">soil dryness</span></label>
             <div class="input-shell">
               <input type="text" name="DMC" placeholder="e.g. 26.1" required="required"/>
             </div>
           </div>
           <div class="field">
-            <label>ISI</label>
+            <label>ISI <span class="unit">spread rate</span></label>
             <div class="input-shell">
               <input type="text" name="ISI" placeholder="e.g. 5.3" required="required"/>
             </div>
           </div>
         </div>
 
-        <p class="section-label" style="margin:0 -22px 18px; border-top:1px solid var(--line);">Site Classification</p>
+        <p class="section-label" style="margin:0 -22px 18px; border-top:1px solid var(--line);">Site</p>
         <div class="field-grid">
           <div class="field">
-            <label>Fire Class</label>
+            <label>Fire Occurred?</label>
             <div class="input-shell">
-              <input type="text" name="Classes" placeholder="e.g. 1 = fire, 0 = not fire" required="required"/>
+              <select name="Classes" required="required">
+                <option value="" disabled selected>Choose</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
             </div>
           </div>
           <div class="field">
             <label>Region</label>
             <div class="input-shell">
-              <input type="text" name="Region" placeholder="e.g. 0 = Bejaia, 1 = Sidi-Bel Abbes" required="required"/>
+              <select name="Region" required="required">
+                <option value="" disabled selected>Choose</option>
+                <option value="0">Bejaia</option>
+                <option value="1">Sidi-Bel Abbes</option>
+              </select>
             </div>
           </div>
         </div>
@@ -428,7 +436,7 @@
       <p class="section-label"><span class="n">2</span>Predicted Index</p>
       <div class="gauge-body">
 
-        {% if results %}
+        
         <svg class="gauge-svg" viewBox="0 0 280 170" id="gaugeSvg">
           <defs>
             <linearGradient id="zoneGrad" x1="0" y1="0" x2="1" y2="0">
@@ -452,12 +460,12 @@
           <span><i class="dot" style="background:var(--ember)"></i>High</span>
           <span><i class="dot" style="background:var(--danger)"></i>Extreme</span>
         </div>
-        {% else %}
+        
         <div class="gauge-empty">
           <span class="big">Awaiting Input</span>
           Fill in the readings and run the prediction to see the fire weather index plotted here.
         </div>
-        {% endif %}
+        
 
       </div>
       <div class="footnote">
