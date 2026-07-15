@@ -436,7 +436,7 @@
       <p class="section-label"><span class="n">2</span>Predicted Index</p>
       <div class="gauge-body">
 
-        
+        {% if results %}
         <svg class="gauge-svg" viewBox="0 0 280 170" id="gaugeSvg">
           <defs>
             <linearGradient id="zoneGrad" x1="0" y1="0" x2="1" y2="0">
@@ -460,12 +460,12 @@
           <span><i class="dot" style="background:var(--ember)"></i>High</span>
           <span><i class="dot" style="background:var(--danger)"></i>Extreme</span>
         </div>
-        
+        {% else %}
         <div class="gauge-empty">
           <span class="big">Awaiting Input</span>
           Fill in the readings and run the prediction to see the fire weather index plotted here.
         </div>
-        
+         {% endif %}
 
       </div>
       <div class="footnote">
