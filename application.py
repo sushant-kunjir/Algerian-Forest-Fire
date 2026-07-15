@@ -30,9 +30,9 @@ def predict_datapoint():
         new_scaled_data=standard_scalar.transform([[Temprature,RH,WS,Rain,FFMC,DMC,ISI,Classes,Region]])
         result=ridge_model.predict(new_scaled_data)
 
-        return render_template('algerian-forest-fire-v152.vercel.app',results=np.round(result[0],2))
+        return render_template('index.html',results=np.round(result[0],2))
     else:
-        return render_template('algerian-forest-fire-v152.vercel.app')
+        return render_template('index.html')
 
 if __name__=="__main__":
     app.run(debug=True,host="0.0.0.0",port=8000)
