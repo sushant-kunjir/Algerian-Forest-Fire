@@ -9,11 +9,11 @@ from pathlib import Path
 
 st.set_page_config(page_title="FWI Prediction", page_icon="🔥", layout="wide")
 
-col1, col2 = st.columns([1,6])
+col1, col2 = st.columns([8,2])
 
-with col1:
+with col2:
     if st.button("⬅ Dashboard"):
-        st.switch_page("Home.py")
+        st.switch_page("https://sushant-algerian-forest-project3.streamlit.app/")
 
 st.markdown("""
 <style>
