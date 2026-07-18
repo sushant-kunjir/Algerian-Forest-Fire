@@ -15,11 +15,16 @@ with col2:
         use_container_width=True,
         type="primary"
     ):
-        st.page_link("🔥 Predict FWI","https://sushant-algerian-forest-project3.streamlit.app/prediction")
+        st.page_link("https://sushant-algerian-forest-project3.streamlit.app/prediction")
 st.title("Algerian Forest Fire Analysis")
 st.markdown("""
     This Project shows the Analysis of Algerian forest 
     """)
+
+st.link_button(
+    "🔮 Prediction",
+    "https://algerian-forest-fire-2-fgvw.onrender.com/"
+)
 
 df=pd.read_csv("Algerian_forest_fire_cleaned_dataset.csv")
 np.round(df,2)
