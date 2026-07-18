@@ -12,11 +12,8 @@ st.set_page_config(page_title="FWI Prediction", page_icon="🔥", layout="wide")
 col1, col2 = st.columns([8,2])
 
 with col2:
-    st.link_button(
-        "⬅ Dashboard",
-        "https://sushant-algerian-forest-project3.streamlit.app/",
-        use_container_width=True
-    )
+    if st.button("⬅ Dashboard"):
+        st.page_link("⬅ Dashboard","https://sushant-algerian-forest-project3.streamlit.app/")
 
 st.markdown("""
 <style>
