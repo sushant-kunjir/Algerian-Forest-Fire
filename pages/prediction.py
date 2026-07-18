@@ -13,7 +13,10 @@ col1, col2 = st.columns([8,2])
 
 with col2:
     if st.button("⬅ Dashboard"):
-        st.page_link("https://sushant-algerian-forest-project3.streamlit.app/")
+        st.link_button(
+        "⬅ Dashboard",
+        "https://sushant-algerian-forest-project3.streamlit.app/"
+    )
 
 st.markdown("""
 <style>

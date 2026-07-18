@@ -10,12 +10,11 @@ st.set_page_config(
 col1, col2 = st.columns([8,2])
 
 with col2:
-    if st.button(
+    st.link_button(
         "🔥 Predict FWI",
-        use_container_width=True,
-        type="primary"
-    ):
-        st.page_link("https://sushant-algerian-forest-project3.streamlit.app/prediction")
+        "https://sushant-algerian-forest-project3.streamlit.app/prediction",
+        use_container_width=True
+    )
 st.title("Algerian Forest Fire Analysis")
 st.markdown("""
     This Project shows the Analysis of Algerian forest 
