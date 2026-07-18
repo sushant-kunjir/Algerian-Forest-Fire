@@ -15,7 +15,7 @@ with col2:
         use_container_width=True,
         type="primary"
     ):
-        st.page_link("https://sushant-algerian-forest-project3.streamlit.app/prediction")
+        st.page_link("🔥 Predict FWI","https://sushant-algerian-forest-project3.streamlit.app/prediction")
 st.title("Algerian Forest Fire Analysis")
 st.markdown("""
     This Project shows the Analysis of Algerian forest 
