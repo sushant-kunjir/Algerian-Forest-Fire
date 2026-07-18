@@ -9,14 +9,7 @@ from pathlib import Path
 
 st.set_page_config(page_title="FWI Prediction", page_icon="🔥", layout="wide")
 
-col1, col2 = st.columns([8,2])
 
-with col2:
-    st.link_button(
-        "⬅ Dashboard",
-        "https://sushant-algerian-forest-project3.streamlit.app",
-        use_container_width=True
-    )
 st.markdown("""
 <style>
 .stApp{background:#15110d;color:white;}
@@ -36,6 +29,15 @@ with open(model_path,"rb") as f:
     model = pickle.load(f)
 with open(scaler_path,"rb") as f:
     scaler = pickle.load(f)
+
+col1, col2 = st.columns([8,2])
+
+with col2:
+    st.link_button(
+        "⬅ Dashboard",
+        "https://sushant-algerian-forest-project3.streamlit.app",
+        use_container_width=True
+    )
 
 st.markdown("<div class='title'>🔥 Forest Fire Weather Index Predictor</div>", unsafe_allow_html=True)
 st.markdown("<div class='sub'>AI Powered Ridge Regression Model</div>", unsafe_allow_html=True)
