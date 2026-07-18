@@ -7,6 +7,11 @@ st.set_page_config(
     page_title="Algerian Forest Fire Project",
     layout="wide"
 ) 
+
+st.title("Algerian Forest Fire Analysis")
+st.markdown("""
+    This Project shows the Analysis of Algerian forest 
+    """)
 col1, col2 = st.columns([8,2])
 
 with col2:
@@ -15,11 +20,6 @@ with col2:
         "https://sushant-algerian-forest-project3.streamlit.app/prediction",
         use_container_width=True
     )
-
-st.title("Algerian Forest Fire Analysis")
-st.markdown("""
-    This Project shows the Analysis of Algerian forest 
-    """)
 
 df=pd.read_csv("Algerian_forest_fire_cleaned_dataset.csv")
 np.round(df,2)
