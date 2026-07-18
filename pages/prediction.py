@@ -14,7 +14,7 @@ st.markdown("""
 <style>
 .stApp{background:#15110d;color:white;}
 .block-container{padding-top:1.2rem;}
-.title{font-size:42px;font-weight:800;color:#ff6b2d;}
+.title{font-size:42px;font-weight:800;}
 .sub{color:#c7c7c7;}
 .card{background:#211912;padding:22px;border-radius:16px;border:1px solid #3d2c1f;}
 .stButton>button{width:100%;height:52px;background:#ff6b2d;color:white;font-weight:bold;border:none;border-radius:10px;}
