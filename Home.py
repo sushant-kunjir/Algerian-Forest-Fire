@@ -10,21 +10,16 @@ st.set_page_config(
 col1, col2 = st.columns([8,2])
 
 with col2:
-    if st.button(
+    st.link_button(
         "🔥 Predict FWI",
-        use_container_width=True,
-        type="primary"
-    ):
-        st.page_link("https://sushant-algerian-forest-project3.streamlit.app/prediction")
+        "https://sushant-algerian-forest-project3.streamlit.app/prediction",
+        use_container_width=True
+    )
+
 st.title("Algerian Forest Fire Analysis")
 st.markdown("""
     This Project shows the Analysis of Algerian forest 
     """)
-
-st.link_button(
-    "🔮 Prediction",
-    "https://algerian-forest-fire-2-fgvw.onrender.com/"
-)
 
 df=pd.read_csv("Algerian_forest_fire_cleaned_dataset.csv")
 np.round(df,2)
